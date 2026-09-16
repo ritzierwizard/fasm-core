@@ -1,5 +1,5 @@
-if ~ defined REGISTERS_INC | defined defined_REGISTERS_INC
-	REGISTERS_INC: defined_REGISTERS_INC = 1
+if ~ definite REGISTERS_INC
+	REGISTERS_INC = 1
 
 	; syscall numbers: /usr/src/linux/include/asm-x86_64/unistd.h
 	; parameters order:

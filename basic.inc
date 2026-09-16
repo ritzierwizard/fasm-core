@@ -1,15 +1,16 @@
-if ~ defined BASIC_INC | defined defined_BASIC_INC
-	BASIC_INC: defined_BASIC_INC = 1
+if ~ definite BASIC_INC
+	BASIC_INC = 1
 
-	include './constants.inc'
+	include './constants/constants.inc'
 	include './registers.inc'
 	include './syscalls.inc'
+	include './strings.inc'
 
-	macro write str*, len*
-		syscall3 SYS_write, STDOUT, str, len
+	macro write str*
+		syscall3 SYS_write, STDOUT, str.buf, str.len
 	end macro
 
 	macro exit code*
 		syscall1 SYS_exit, code
 	end macro
-end if
+end if ; BASIC_INC

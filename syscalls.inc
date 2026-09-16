@@ -1,5 +1,6 @@
-if ~ defined SYSCALLS_INC | defined defined_SYSCALLS_INC
-	SYSCALLS_INC: defined_SYSCALLS_INC = 1
+if ~ definite SYSCALLS_INC
+	include './constants/linux-syscalls.inc'
+	SYSCALLS_INC = 1
 
 	macro syscall1 code*, arg1*
 	mov REG_RETURN_64, code

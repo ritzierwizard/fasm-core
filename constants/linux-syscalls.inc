@@ -1,7 +1,6 @@
-if ~ defined CONSTANTS_INC | defined defined_CONSTANTS_INC
-	CONSTANTS_INC: defined_CONSTANTS_INC = 1
+if ~ definite LINUX_SYSCALLS_INC
+	LINUX_SYSCALLS_INC = 1
 
-	; CONSTANTS
 	SYS_read           = 0 ; man 2 read
 	SYS_write          = 1 ; man 2 write
 	SYS_open           = 2 ; man 2 open
@@ -38,9 +37,5 @@ if ~ defined CONSTANTS_INC | defined defined_CONSTANTS_INC
 	SYS_dup2           = 33 ; man 2 dup2
 	; TODO: finish linux syscall enumeration
 	SYS_exit = 60
-	endl = 10
-	STDIN = 0
-	STDOUT = 1
-	ERR_SUCCESS = 0
-	BRAND_LINUX = 3
-end if ; CONSTANTS_INC
+	
+end if ; LINUX_SYSCALLS_INC
