@@ -1,7 +1,7 @@
 if ~ definite CONSTANTS_INC
 	CONSTANTS_INC = 1
 
-	endl = 10 ; equivalent of \n, not c++'s endl. perhaps replace with, e.g., newline
+	NEWLINE = 10
 	STDIN = 0
 	STDOUT = 1
 	ERR_SUCCESS = 0
