@@ -1,3 +1,6 @@
+if not defined BASIC_INC
+BASIC_INC = 1
+
 include 'constants.inc'
 include 'registers.inc'
 include 'syscalls.inc'
@@ -10,3 +13,5 @@ end macro
 macro exit code*
 	syscall1 REG_RETURN_64, SYS_exit, code
 end macro
+
+end if ; BASIC_INC
