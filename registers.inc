@@ -26,3 +26,6 @@ REG_PARAM_3_32 equ edx
 REG_PARAM_4_32 equ r10d
 REG_PARAM_5_32 equ r8d
 REG_PARAM_6_32 equ r9d
+
+REG_SCRATCH_64 equ r11
+REG_SCRATCH_32 equ r11d

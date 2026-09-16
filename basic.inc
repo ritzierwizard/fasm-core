@@ -3,7 +3,7 @@ include 'registers.inc'
 include 'syscalls.inc'
 include 'strings.inc'
 
-macro writeln str*, len*
+macro write str*, len*
 	syscall3 REG_RETURN_64, SYS_write, STDOUT, str, len
 end macro
 
