@@ -1,17 +1,14 @@
-if not defined BASIC_INC
-BASIC_INC = 1
-
-include 'constants.inc'
-include 'registers.inc'
-include 'syscalls.inc'
-include 'strings.inc'
+; include 'include/ifdef.inc' in the main assembly file before anything else
+ifndef BASIC_INC
+include './constants.inc'
+include './registers.inc'
+include './syscalls.inc'
 
 macro write str*, len*
-	syscall3 REG_RETURN_64, SYS_write, STDOUT, str, len
+	syscall3 SYS_write, STDOUT, str, len
 end macro
 
 macro exit code*
-	syscall1 REG_RETURN_64, SYS_exit, code
+	syscall1 SYS_exit, code
 end macro
-
-end if ; BASIC_INC
+endif ; BASIC_INC
