@@ -7,7 +7,7 @@ if ~ definite BASIC_INC
 	include './strings.inc'
 
 	macro write str*
-		syscall3 SYS_write, STDOUT, str.buf, str.len
+		syscall3 SYS_write, STDOUT_FNO, str.buf, str.len
 	end macro
 
 	macro exit code*
