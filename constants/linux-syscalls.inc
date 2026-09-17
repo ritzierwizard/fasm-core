@@ -1,7 +1,7 @@
 if ~ definite LINUX_SYSCALLS_INC
 	LINUX_SYSCALLS_INC = 1
 
-	include './enum.inc'
+	include 'include/constants/enum.inc'
 
 	enum LINUX_SYSCALLS
 		item SYS_read,                    0
