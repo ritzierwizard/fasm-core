@@ -1,10 +1,10 @@
 if ~ definite BASIC_INC
 	BASIC_INC = 1
 
-	include './constants/constants.inc'
-	include './registers.inc'
-	include './syscalls.inc'
-	include './strings.inc'
+	include 'include/constants/constants.inc'
+	include 'include/registers.inc'
+	include 'include/syscalls.inc'
+	include 'include/strings.inc'
 
 	macro write str*
 		syscall3 SYS_write, STDOUT_FNO, str.buf, str.len

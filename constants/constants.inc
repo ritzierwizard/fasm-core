@@ -1,7 +1,7 @@
 if ~ definite CONSTANTS_INC
 	CONSTANTS_INC = 1
 
-	include './enum.inc'
+	include 'include/constants/enum.inc'
 
 	NEWLINE = 10
 	ERR_SUCCESS = 0
