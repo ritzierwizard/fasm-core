@@ -8,9 +8,9 @@ if ~ definite CONSTANTS_INC
 	BRAND_LINUX = 3
 
 	enum FNO_HANDLE
-		item STDIN_FNO
-		item STDOUT_FNO
-		item STDERR_FNO
+		item STDIN_FNO,  0
+		item STDOUT_FNO, 1
+		item STDERR_FNO, 2
 	FNO_HANDLE
 
 end if ; CONSTANTS_INC
